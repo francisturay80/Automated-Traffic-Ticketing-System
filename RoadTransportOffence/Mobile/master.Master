@@ -1,0 +1,210 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="RoadTransportOffence.Mobile.master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+  
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NCRA</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <%--<link rel="icon" href="img/favicon.ico">--%>
+    <link rel="stylesheet" href="plugins/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/css/font-awesome.min.css">
+    <link rel="stylesheet" href="plugins/css/animate.css">
+    <link rel="stylesheet" href="plugins/css/ripples.min.css">
+    <link rel="stylesheet" href="plugins/css/jquery-jvectormap-2.0.2.css">
+    <link rel="stylesheet" href="css/outlay.css">
+     <link rel="shortcut icon" href="../assets/dist/img/logo_CoatofArm.png" type="image/x-icon">
+    <%-- <link rel="stylesheet" href="css/new.css">--%>
+    
+    <link rel="stylesheet" href="css/colors/green.css">
+    <!-- Skin switcher -->
+    <!-- Manually link your desire skin -->
+     <style type="text/css">
+    .skins {
+        position: fixed;
+        top: 190px;
+        left: -120px;
+        transition: .3s ease-in-out;
+        z-index: 1000;
+    }
+    
+    .skins:hover {
+        left: 0;
+    }
+    
+    .skin-colors {
+        list-style: none;
+        padding: 20px;
+        margin: 0;
+        background-color: #fff;
+        width: 120px;
+        border: 1px solid #e7e7e7;
+    }
+    
+    .skin-colors li {
+        position: relative;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        margin: -3px;
+        line-height: 0;
+        transition: .3s ease-in-out;
+    }
+    
+    .skin-colors li:hover {
+        opacity: .7;
+    }
+    
+    .skin-colors li.active::before {
+        content: "\f00c";
+        font-family: FontAwesome;
+        font-size: 20px;
+        width: 32px;
+        line-height: 32px;
+        text-align: center;
+        position: absolute;
+        color: #fff;
+    }
+    
+    .skin-toggler {
+        position: absolute;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        right: -49px;
+        top: 0;
+        background-color: #fff;
+        font-size: 30px;
+        text-align: center;
+        line-height: 50px;
+        color: #888;
+        border: 1px solid #e7e7e7;
+        border-left: 0;
+    }
+    
+
+    </style>
+</head>
+<body class="hold-transition sidebar-mini">
+    <form id="form1" runat="server">
+
+
+       
+        <%-- <div id="preloader">
+        <div class="spinner"></div>
+    </div>--%>
+    <div class="wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="index-2.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>e</b></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Offence</b></span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-fixed-top">
+                <!-- Sidebar toggle button-->
+             
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav" data-dropdown-in="flipInY" data-dropdown-out="fadeOut">
+                        <!-- Control Sidebar Toggle Button -->
+
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle waves-effect" data-toggle="dropdown">
+                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                <span class="hidden-xs"> <asp:Label ID="username2" runat="server"></asp:Label></span>
+                                <!-- The user image in the navbar-->
+                               
+                                <asp:Image ID="image" runat="server" class="user-image" alt="User Image"/>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="profile.aspx"><i class="fa fa-fw fa-user"></i> Profile</a>
+                                </li>
+                              
+                                <li>
+                                    <a href="mobResetPass.aspx"><i class="fa fa-key"></i> Reset Password</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                  
+                                    <asp:LinkButton ID="LinkButton1" runat="server" onclick="btnlogout_Click"  > <i class="fa fa-fw fa-gear"></i> Logout </asp:LinkButton>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+             
+            </nav>
+        </header>
+      
+       
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+
+
+           <footer class="main-footer">
+         
+           <%=DateTime.Now.Year%> &copy; <a href="#" target="_blank"> Government of Sierra Leone<</a>
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+    <!-- REQUIRED JS SCRIPTS -->
+    <!-- jQuery 2.1.4 -->
+    <script src="plugins/js/jquery-3.1.1.min.js"></script>
+    <script src="plugins/js/bootstrap.js"></script>
+    <script src="plugins/js/jquery.sparkline.min.js"></script>
+    <script src="plugins/js/countUp.min.js"></script>
+    <script src="plugins/js/raphael.min.js"></script>
+    <script src="plugins/js/morris.min.js"></script>
+    <script src="plugins/js/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="plugins/js/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="plugins/js/material.min.js"></script>
+    <script src="plugins/js/ripples.min.js"></script>
+    <script src="plugins/rendro-easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+    <script src="plugins/js/Chart.bundle.min.js"></script>
+    <script src="plugins/js/jquery.slimscroll.min.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/widgets.js"></script>
+    <script src="js/app.js"></script>
+         
+
+
+
+    <!-- Color Switcher -->
+    <script type="text/javascript">
+        $(function () {
+
+            $("head").append('<link id="skin-css" rel="stylesheet">');
+
+            $('.skin-colors li').on('click', function () {
+                $('.skins li').removeClass('active');
+                $(this).addClass('active');
+                $('#skin-css').attr('href', 'css/colors/' + $(this).data('skin') + '.css');
+            });
+
+        });
+    </script>
+    </form>
+</body>
+</html>
+

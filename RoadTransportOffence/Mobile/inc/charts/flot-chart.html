@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.upplanet.com/bighero/outlay-demo/inc/charts/flot-chart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jul 2020 07:28:31 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Outlay - Responsive Material Design Admin Template</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="icon" href="../../img/favicon.ico">
+    <link rel="stylesheet" href="../../plugins/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../plugins/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../plugins/css/animate.css">
+    <link rel="stylesheet" href="../../plugins/css/ripples.min.css">
+    <link rel="stylesheet" href="../../plugins/css/jquery.toast.min.css">
+    <link rel="stylesheet" href="../../css/outlay.css">
+    <link rel="stylesheet" href="../../css/colors/green.css">
+    <!-- Skin switcher -->
+    <!-- Manually link your desire skin -->
+    <style type="text/css">
+    .skins {
+        position: fixed;
+        top: 190px;
+        left: -120px;
+        transition: .3s ease-in-out;
+        z-index: 1000;
+    }
+    
+    .skins:hover {
+        left: 0;
+    }
+    
+    .skin-colors {
+        list-style: none;
+        padding: 20px;
+        margin: 0;
+        background-color: #fff;
+        width: 120px;
+        border: 1px solid #e7e7e7;
+    }
+    
+    .skin-colors li {
+        position: relative;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        margin: -3px;
+        line-height: 0;
+        transition: .3s ease-in-out;
+    }
+    
+    .skin-colors li:hover {
+        opacity: .7;
+    }
+    
+    .skin-colors li.active::before {
+        content: "\f00c";
+        font-family: FontAwesome;
+        font-size: 20px;
+        width: 32px;
+        line-height: 32px;
+        text-align: center;
+        position: absolute;
+        color: #fff;
+    }
+    
+    .skin-toggler {
+        position: absolute;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        right: -49px;
+        top: 0;
+        background-color: #fff;
+        font-size: 30px;
+        text-align: center;
+        line-height: 50px;
+        color: #888;
+        border: 1px solid #e7e7e7;
+        border-left: 0;
+    }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../../index-2.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>O</b>L</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Out</b>Lay</span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-fixed-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav" data-dropdown-in="flipInY" data-dropdown-out="fadeOut">
+                        <!-- Control Sidebar Toggle Button -->
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect" data-toggle="collapse" data-target="#site_navbar_search">
+                                <i class="fa fa-search top-nav-icon"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link toggle-fullscreen" href="#">
+                                <i class="fa fa-arrows-alt"></i>
+                            </a>
+                        </li>
+                        <!-- Notifications Menu -->
+                        <li class="dropdown notifications-menu">
+                            <!-- Menu toggle button -->
+                            <a href="#" class="dropdown-toggle waves-effect" data-toggle="dropdown">
+                                <i class="fa fa-bell-o"></i>
+                                <span class="label label-info">7</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 7 notifications</li>
+                                <li>
+                                    <!-- Inner Menu: contains the notifications -->
+                                    <ul class="notification-menu">
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object img-circle img-48" src="../../img/avatars/avatar2.png" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">John Deo <small> <i class="fa fa-clock-o"></i> 4 mins</small></h4>
+                                                    <p>Started Following you </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object img-circle img-48" src="../../img/avatars/avatar.png" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"> Vance Osborn<small> <i class="fa fa-clock-o"></i> 5 mins</small></h4>
+                                                    <p>Forked your project</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object img-circle img-48" src="../../img/avatars/avatar3.png" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">Gary Robinson<small> <i class="fa fa-clock-o"></i> 8 mins</small></h4>
+                                                    <p>Created new project with John Deo</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object img-circle img-48" src="../../img/avatars/avatar4.png" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">Kelly Richards<small> <i class="fa fa-clock-o"></i> 3 hours</small></h4>
+                                                    <p>Pined an Event for tomorrow</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object img-circle img-48" src="../../img/avatars/avatar5.png" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">Steven Peterson<small> <i class="fa fa-clock-o"></i> 2 days</small></h4>
+                                                    <p>Started Following you </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object img-circle img-48" src="../../img/avatars/avatar6.png" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">Micheal Terry<small> <i class="fa fa-clock-o"></i> 4 days</small></h4>
+                                                    <p>Started Following you </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object img-circle img-48" src="../../img/avatars/avatar7.png" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">David Perry<small> <i class="fa fa-clock-o"></i> 1 weeks</small></h4>
+                                                    <p>Commented on your commit</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <!-- end notification -->
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">View all</a></li>
+                            </ul>
+                        </li>
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle waves-effect" data-toggle="dropdown">
+                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                <span class="hidden-xs">Gary Robinson</span>
+                                <!-- The user image in the navbar-->
+                                <img src="../../img/avatars/avatar4.png" class="user-image" alt="User Image">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox <span class="label label-danger">3</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-search-overlap" id="site_navbar_search">
+                    <form role="search">
+                        <div class="form-group mb-0">
+                            <div class="input-search">
+                                <div class="input-group">
+                                    <input type="text" id="overlay_search" name="overlay-search" class="form-control" placeholder="Search">
+                                    <span class="input-group-addon">
+                                    <a  href="javascript:void(0)" class="close-input-overlay waves-effect" data-target="#site_navbar_search" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="fa fa-times"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel">
+                    <div class="image waves-effect">
+                        <img src="../../img/avatars/avatar4.png" class="img-circle img-responsive " alt="User Image">
+                    </div>
+                    <div class="text-center info">
+                        <strong>Gary Robinson</strong>
+                        <i>UX/ Designer</i>
+                    </div>
+                </div>
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu">
+                    <li class="header">Navigation</li>
+                    <li class="active ">
+                        <a href="../../index-2.html" class="waves-effect"><i class="fa fa-bar-chart"></i> <span>Dashboard</span></a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-sliders"></i> <span>UI Elements</span> <i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="../ui-elements/grid.html">Grid</a></li>
+                            <li><a href="../ui-elements/buttons.html">Buttons</a></li>
+                            <li><a href="../ui-elements/icons.html">Icons</a></li>
+                            <li><a href="../ui-elements/notifications.html">Notifications</a></li>
+                            <li><a href="../ui-elements/panels.html">Panels</a></li>
+                            <li><a href="../ui-elements/tabs-and-accordions.html">Tabs & Accordions</a></li>
+                            <li><a href="../ui-elements/slider.html">Range Slider</a></li>
+                            <li><a href="../ui-elements/modal.html">Modals</a></li>
+                            <li><a href="../ui-elements/typography.html">Typography</a></li>
+                            <li><a href="../ui-elements/miscellaneous.html">Miscellaneous</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-pencil-square-o"></i> <span>Forms</span> <i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href='../forms/basic-form.html'>Basic</a></li>
+                            <li><a href='../forms/advanced-form.html'>Advanced Froms</a></li>
+                            <li><a href='../forms/wizard.html'>Wizard</a></li>
+                            <li><a href='../forms/wysiwyg-editors.html'>Wysiwyg Editors</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-list-ul"></i> <span>Tables</span> <i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href='../tables/table-basic.html'>Basic</a></li>
+                            <li><a href='../tables/data-tables.html'>Data Table</a></li>
+                            <li><a href='../tables/x-editable.html'>Editable</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-area-chart"></i> <span>Charts</span> <i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href='chartjs.html'>Chartjs</a></li>
+                            <li><a href='flot-chart.html'>Flot Chart</a></li>
+                            <li><a href='morris.html'>Morris</a></li>
+                            <li><a href='sparkline.html'>Sparkline</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../widgets.html"><i class="fa fa-puzzle-piece"></i> <span>Widgets</span> <span class="label label-success pull-right">14</span></a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-television"></i> <span>Pages</span> <i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href='../pages/login.html'>Login</a></li>
+                            <li><a href='../pages/register.html'>Register</a></li>
+                            <li><a href='../pages/login-register.html'>Login & Register</a></li>
+                            <li><a href='../pages/forgot-password.html'>Forgot Password</a></li>
+                            <li><a href='../pages/timeline.html'>Timeline</a></li>
+                            <li><a href='../pages/invoice.html'>Invoice</a></li>
+                            <li><a href='../pages/404.html'>404</a></li>
+                        </ul>
+                    </li>
+                    <li class="header">More</li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-envelope"></i> <span>Email</span> <i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href='../email/inbox.html'>Inbox</a></li>
+                            <li><a href='../email/email-details.html'>Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-map"></i> <span>Map</span> <i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href='../maps/google-map.html'>Google</a></li>
+                            <li><a href='../maps/vector-map.html'>Vector Map</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                   Charts
+                    <small>Flot Chart</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-bar-chart"></i>Charts</a></li>
+                    <li class="active">Flot Chart</li>
+                </ol>
+            </section>
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <div class="pull-left">
+                                        <h6 class="panel-title txt-dark"><i class="icon-graph mr-10"></i>Live Line Chart</h6>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="panel-wrapper collapse in">
+                                    <div class="panel-body">
+                                        <div class="flot-container" style="height:200px">
+                                            <div id="real_time_chart" class="demo-placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <div class="pull-left">
+                                        <h6 class="panel-title txt-dark"><i class=" icon-graph mr-10"></i>Composite line Chart</h6>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="panel-wrapper collapse in">
+                                    <div class="panel-body">
+                                        <div class="flot-container" style="height:200px">
+                                            <div id="flot_line_chart" class="demo-placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <div class="pull-left">
+                                        <h6 class="panel-title txt-dark"><i class="icon-pie-chart mr-10"></i>Pie Chart</h6>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="panel-wrapper collapse in">
+                                    <div class="panel-body">
+                                        <div class="flot-container" style="height:250px">
+                                            <div id="flot_pie_chart" class="demo-placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <div class="pull-left">
+                                        <h6 class="panel-title txt-dark"><i class=" icon-graph mr-10"></i>Filled line Chart</h6>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="panel-wrapper collapse in">
+                                    <div class="panel-body">
+                                        <div class="flot-container" style="height:200px">
+                                            <div id="flot_line_chart_moving" class="demo-placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <div class="pull-left">
+                                        <h6 class="panel-title txt-dark"><i class="icon-chart mr-10"></i>Bar Chart</h6>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="panel-wrapper collapse in">
+                                    <div class="panel-body">
+                                        <div class="flot-container" style="height:200px">
+                                            <div id="flot_bar_chart" class="demo-placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <div class="pull-left">
+                                        <h6 class="panel-title txt-dark"><i class=" icon-layers mr-10"></i>Stacked bar Chart</h6>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="panel-wrapper collapse in">
+                                    <div class="panel-body">
+                                        <div class="flot-container" style="height:200px">
+                                            <div id="sales_bars_chart" class="demo-placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="pull-right hidden-xs">
+                Built with <i class="fa fa-heart"></i> by Bighero
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2017 <a href="#">Bighero</a>.</strong> All rights reserved.
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+    <!-- REQUIRED JS SCRIPTS -->
+    <script src="../../plugins/js/jquery2.min.js"></script>
+    <script src="../../plugins/js/bootstrap.js"></script>
+    <script src="../../plugins/js/jquery.sparkline.min.js"></script>
+    <script src="../../plugins/js/countUp.min.js"></script>
+    <script src="../../plugins/js/raphael.min.js"></script>
+    <script src="../../plugins/js/morris.min.js"></script>
+    <script src="../../plugins/js/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="../../plugins/js/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../../plugins/js/material.min.js"></script>
+    <script src="../../plugins/js/ripples.min.js"></script>
+    <script src="../../plugins/js/Chart.bundle.min.js"></script>
+    <script src="../../plugins/Flot/excanvas.min.html"></script>
+    <script src="../../plugins/Flot/jquery.flot.html"></script>
+    <script src="../../plugins/Flot/jquery.flot.pie.html"></script>
+    <script src="../../plugins/Flot/jquery.flot.resize.html"></script>
+    <script src="../../plugins/Flot/jquery.flot.time.html"></script>
+    <script src="../../plugins/Flot/jquery.flot.stack.html"></script>
+    <script src="../../plugins/Flot/jquery.flot.crosshair.html"></script>
+    <script src="../../plugins/flot.tooltip/jquery.flot.tooltip.min.js"></script>
+    <script src="../../plugins/js/jquery.slimscroll.min.js"></script>
+    <script src="../../js/flot-data.js"></script>
+    <script src="../../js/app.js"></script>
+    <!-- Color Switcher -->
+    <script type="text/javascript">
+    $(function() {
+
+        $("head").append('<link id="skin-css" rel="stylesheet">');
+
+        $('.skin-colors li').on('click', function() {
+            $('.skins li').removeClass('active');
+            $(this).addClass('active');
+            $('#skin-css').attr('href', '../../css/colors/' + $(this).data('skin') + '.css');
+        });
+
+    });
+    </script>
+    <div class="skins">
+        <ul class="skin-colors">
+            <li data-skin="green" style="background-color: #27ae60" class="active"></li>
+            <li data-skin="light-green" style="background-color: #8bc34a"></li>
+            <li data-skin="indigo" style="background-color: #3f51b5"></li>
+            <li data-skin="amethyst" style="background-color: #9b59b6"></li>
+            <li data-skin="blue" style="background-color: #00a3d3"></li>
+            <li data-skin="dodger-blue" style="background-color: #33b3d3"></li>
+            <li data-skin="cyan" style="background-color: #00bcd4"></li>
+            <li data-skin="lime" style="background-color: #cddc39"></li>
+            <li data-skin="orange" style="background-color: #f39c12"></li>
+            <li data-skin="amber" style="background-color: #ffc107"></li>
+            <li data-skin="pink" style="background-color: #ea4c89"></li>
+            <li data-skin="red" style="background-color: #D64343"></li>
+            <li data-skin="teal" style="background-color: #009688"></li>
+        </ul>
+        <span class="skin-toggler"><i class="fa fa-gear fa-spin"></i></span>
+    </div>
+    <!-- END Skin switcher -->
+</body>
+
+
+<!-- Mirrored from www.upplanet.com/bighero/outlay-demo/inc/charts/flot-chart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jul 2020 07:28:47 GMT -->
+</html>

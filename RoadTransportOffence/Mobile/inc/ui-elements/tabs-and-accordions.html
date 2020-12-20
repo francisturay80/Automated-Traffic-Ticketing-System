@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.upplanet.com/bighero/outlay-demo/inc/ui-elements/tabs-and-accordions.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jul 2020 07:26:41 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Outlay - Responsive Material Design Admin Template</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="icon" href="../../img/favicon.ico">
+    <link rel="stylesheet" href="../../plugins/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../plugins/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../plugins/css/animate.css">
+    <link rel="stylesheet" href="../../plugins/css/ripples.min.css">
+    <link rel="stylesheet" href="../../plugins/css/jquery.toast.min.css">
+    <link rel="stylesheet" href="../../css/outlay.css">
+    <link rel="stylesheet" href="../../css/colors/green.css">
+    <!-- Skin switcher -->
+    <!-- Manually link your desire skin -->
+    <style type="text/css">
+    .skins {
+        position: fixed;
+        top: 190px;
+        left: -120px;
+        transition: .3s ease-in-out;
+        z-index: 1000;
+    }
+    
+    .skins:hover {
+        left: 0;
+    }
+    
+    .skin-colors {
+        list-style: none;
+        padding: 20px;
+        margin: 0;
+        background-color: #fff;
+        width: 120px;
+        border: 1px solid #e7e7e7;
+    }
+    
+    .skin-colors li {
+        position: relative;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        margin: -3px;
+        line-height: 0;
+        transition: .3s ease-in-out;
+    }
+    
+    .skin-colors li:hover {
+        opacity: .7;
+    }
+    
+    .skin-colors li.active::before {
+        content: "\f00c";
+        font-family: FontAwesome;
+        font-size: 20px;
+        width: 32px;
+        line-height: 32px;
+        text-align: center;
+        position: absolute;
+        color: #fff;
+    }
+    
+    .skin-toggler {
+        position: absolute;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        right: -49px;
+        top: 0;
+        background-color: #fff;
+        font-size: 30px;
+        text-align: center;
+        line-height: 50px;
+        color: #888;
+        border: 1px solid #e7e7e7;
+        border-left: 0;
+    }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../../index-2.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>O</b>L</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Out</b>Lay</span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-fixed-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav" data-dropdown-in="flipInY" data-dropdown-out="fadeOut">
+                        <!-- Control Sidebar Toggle Button -->
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect" data-toggle="collapse" data-target="#site_navbar_search">
+                                <i class="fa fa-search top-nav-icon"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link toggle-fullscreen" href="#">
+                                <i class="fa fa-arrows-alt"></i>
+                            </a>
+                        </li>
+                        <!-- Notifications Menu -->
+                        <li class="dropdown notifications-menu">
+                            <!-- Menu toggle button -->
+                            <a href="#" class="dropdown-toggle waves-effect" data-toggle="dropdown">
+                                <i class="fa fa-bell-o"></i>
+                                <span class="label label-info">7</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 7 notifications</li>
+                                <li>
+                                    <!-- Inner Menu: contains the notifications -->
+                                    <ul class="notification-menu">
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object img-circle img-48" src="../../img/avatars/avatar2.png" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">John Deo <small> <i class="fa fa-clock-o"></i> 4 mins</small></h4>
+                                                    <p>Started Following you </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object img-circle img-48" src="../../img/avatars/avatar.png" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"> Vance Osborn<small> <i class="fa fa-clock-o"></i> 5 mins</small></h4>
+                                                    <p>Forked your project</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object img-circle img-48" src="../../img/avatars/avatar3.png" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">Gary Robinson<small> <i class="fa fa-clock-o"></i> 8 mins</small></h4>
+                                                    <p>Created new project with John Deo</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object img-circle img-48" src="../../img/avatars/avatar4.png" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">Kelly Richards<small> <i class="fa fa-clock-o"></i> 3 hours</small></h4>
+                                                    <p>Pined an Event for tomorrow</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object img-circle img-48" src="../../img/avatars/avatar5.png" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">Steven Peterson<small> <i class="fa fa-clock-o"></i> 2 days</small></h4>
+                                                    <p>Started Following you </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object img-circle img-48" src="../../img/avatars/avatar6.png" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">Micheal Terry<small> <i class="fa fa-clock-o"></i> 4 days</small></h4>
+                                                    <p>Started Following you </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object img-circle img-48" src="../../img/avatars/avatar7.png" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">David Perry<small> <i class="fa fa-clock-o"></i> 1 weeks</small></h4>
+                                                    <p>Commented on your commit</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <!-- end notification -->
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">View all</a></li>
+                            </ul>
+                        </li>
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle waves-effect" data-toggle="dropdown">
+                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                <span class="hidden-xs">Gary Robinson</span>
+                                <!-- The user image in the navbar-->
+                                <img src="../../img/avatars/avatar4.png" class="user-image" alt="User Image">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox <span class="label label-danger">3</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-search-overlap" id="site_navbar_search">
+                    <form role="search">
+                        <div class="form-group mb-0">
+                            <div class="input-search">
+                                <div class="input-group">
+                                    <input type="text" id="overlay_search" name="overlay-search" class="form-control" placeholder="Search">
+                                    <span class="input-group-addon">
+                                    <a  href="javascript:void(0)" class="close-input-overlay waves-effect" data-target="#site_navbar_search" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="fa fa-times"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel">
+                    <div class="image waves-effect">
+                        <img src="../../img/avatars/avatar4.png" class="img-circle img-responsive " alt="User Image">
+                    </div>
+                    <div class="text-center info">
+                        <strong>Gary Robinson</strong>
+                        <i>UX/ Designer</i>
+                    </div>
+                </div>
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu">
+                    <li class="header">Navigation</li>
+                    <li class="active ">
+                        <a href="../../index-2.html" class="waves-effect"><i class="fa fa-bar-chart"></i> <span>Dashboard</span></a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-sliders"></i> <span>UI Elements</span> <i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="grid.html">Grid</a></li>
+                            <li><a href="buttons.html">Buttons</a></li>
+                            <li><a href="icons.html">Icons</a></li>
+                            <li><a href="notifications.html">Notifications</a></li>
+                            <li><a href="panels.html">Panels</a></li>
+                            <li><a href="tabs-and-accordions.html">Tabs & Accordions</a></li>
+                            <li><a href="slider.html">Range Slider</a></li>
+                            <li><a href="modal.html">Modals</a></li>
+                            <li><a href="typography.html">Typography</a></li>
+                            <li><a href="miscellaneous.html">Miscellaneous</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-pencil-square-o"></i> <span>Forms</span> <i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href='../forms/basic-form.html'>Basic</a></li>
+                            <li><a href='../forms/advanced-form.html'>Advanced Froms</a></li>
+                            <li><a href='../forms/wizard.html'>Wizard</a></li>
+                            <li><a href='../forms/wysiwyg-editors.html'>Wysiwyg Editors</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-list-ul"></i> <span>Tables</span> <i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href='../tables/table-basic.html'>Basic</a></li>
+                            <li><a href='../tables/data-tables.html'>Data Table</a></li>
+                            <li><a href='../tables/x-editable.html'>Editable</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-area-chart"></i> <span>Charts</span> <i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href='../charts/chartjs.html'>Chartjs</a></li>
+                            <li><a href='../charts/flot-chart.html'>Flot Chart</a></li>
+                            <li><a href='../charts/morris.html'>Morris</a></li>
+                            <li><a href='../charts/sparkline.html'>Sparkline</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../widgets.html"><i class="fa fa-puzzle-piece"></i> <span>Widgets</span> <span class="label label-success pull-right">14</span></a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-television"></i> <span>Pages</span> <i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href='../pages/login.html'>Login</a></li>
+                            <li><a href='../pages/register.html'>Register</a></li>
+                            <li><a href='../pages/login-register.html'>Login & Register</a></li>
+                            <li><a href='../pages/forgot-password.html'>Forgot Password</a></li>
+                            <li><a href='../pages/timeline.html'>Timeline</a></li>
+                            <li><a href='../pages/invoice.html'>Invoice</a></li>
+                            <li><a href='../pages/404.html'>404</a></li>
+                        </ul>
+                    </li>
+                    <li class="header">More</li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-envelope"></i> <span>Email</span> <i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href='../email/inbox.html'>Inbox</a></li>
+                            <li><a href='../email/email-details.html'>Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-map"></i> <span>Map</span> <i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href='../maps/google-map.html'>Google</a></li>
+                            <li><a href='../maps/vector-map.html'>Vector Map</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                   Tabs and Accordions
+                    <small>Tabs and Accordions Examples</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-sliders"></i>UI Elements</a></li>
+                    <li class="active">Tabs and Accordions</li>
+                </ol>
+            </section>
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <!-- Tabs -->
+                    <!-- third row  -->
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                            <div class="tab-container widget">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                                    <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                                    <li><a href="#messages" data-toggle="tab">Messages</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active fade in" id="home">
+                                        <h2>Basic Tabs</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laboriosam labore dolores eveniet perferendis, quas amet fugit, excepturi molestias? Esse odio impedit numquam sapiente perspiciatis cupiditate vitae eos cum, harum.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade in" id="profile">
+                                        <h2>Typography</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consequatur eveniet consequuntur ratione a. Sunt totam sapiente maiores corporis natus exercitationem, illo commodi? Expedita molestias aliquam iste molestiae. Pariatur, qui.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade in" id="messages">
+                                        <h2>Message</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ratione, nisi maiores possimus culpa ut quas quae earum itaque, soluta reprehenderit neque eos. Placeat ratione, sapiente nemo expedita enim a.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-container tab-left widget">
+                                <ul class="nav nav-tabs flat-tabs">
+                                    <li class="active"><a href="#tab3-1" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+                                    <li><a href="#tab3-2" data-toggle="tab"><i class="fa fa-text-height"></i></a></li>
+                                    <li><a href="#tab3-3" data-toggle="tab"><i class="fa fa-camera"></i></a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active fade in" id="tab3-1">
+                                        <h3 class="hthin">Left Tabs</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet excepturi minus magnam accusamus magni saepe asperiores sed, suscipit officia velit fugiat maiores quas blanditiis? Eos sapiente quos at aut quis?
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab3-2">
+                                        <h2>Typography</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique blanditiis eaque odit ipsum, architecto alias ex incidunt, maxime praesentium, molestias quis ut adipisci corporis in laboriosam veniam voluptas dolores facere?
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab3-3">
+                                        <h2 class="hthin">Photography</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, earum et. Voluptatem consectetur saepe unde iusto! Rem odit autem maxime explicabo quia ipsam, doloribus sapiente veniam amet, vitae inventore iusto!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="tab-container tab-bottom widget">
+                                <div class="tab-content">
+                                    <div class="tab-pane active fade in" id="tab2-1">
+                                        <h2>Basic Tabs</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quis assumenda distinctio laudantium dolore laboriosam modi consequatur, numquam natus, eius ea neque totam porro aspernatur qui aperiam recusandae possimus iste.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade in" id="tab2-2">
+                                        <h2>Profile</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis fugiat dolorem, velit, est numquam necessitatibus exercitationem ipsum, perferendis in architecto magni. Ab deleniti alias, atque facilis est tenetur accusamus obcaecati.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade in" id="tab2-3">
+                                        <h2>Message</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore nihil, repellat consequatur minus magnam ipsam, possimus ipsum vel dicta error labore mollitia porro velit, culpa modi illo? Delectus, autem esse?
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul class="nav nav-tabs flat-tabs">
+                                    <li class="active"><a href="#tab2-1" data-toggle="tab">Home</a></li>
+                                    <li><a href="#tab2-2" data-toggle="tab">Profile</a></li>
+                                    <li><a href="#tab2-3" data-toggle="tab">Messages</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-container tab-right widget">
+                                <ul class="nav nav-tabs flat-tabs">
+                                    <li class="active"><a href="#tab4-1" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+                                    <li><a href="#tab4-2" data-toggle="tab"><i class="fa fa-text-height"></i></a></li>
+                                    <li><a href="#tab4-3" data-toggle="tab"><i class="fa fa-camera"></i></a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active fade in" id="tab4-1">
+                                        <h3 class="hthin">Right Tabs</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptates maiores quam quis, enim vitae, recusandae vel ex. Inventore corporis repudiandae doloribus deserunt consequatur cum non laborum quod quas distinctio.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab4-2">
+                                        <h2>Typography</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus at laboriosam quae pariatur, porro harum atque quia accusantium necessitatibus animi rerum eligendi, fugiat iste provident iusto aut natus quaerat rem!
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab4-3">
+                                        <h2 class="hthin">Photography</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet explicabo ullam, autem, laudantium modi ipsa perferendis qui odit voluptates consequuntur, quibusdam quis sed blanditiis libero suscipit, facilis porro officiis placeat.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end third row -->
+                    <hr>
+                    <!-- Accordions -->
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="panel-group accordion" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" class="collapsed">
+                                            <i class="fa fa-angle-right"></i> Basic accordion
+                                          </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis debitis neque, dignissimos a nostrum at ducimus voluptate amet officia consequatur vitae aliquid, maiores tenetur ratione non, itaque, fuga quasi. Officia!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false">
+                                            <i class="fa fa-angle-right"></i> Collapsible Group Item #2
+                                          </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quisquam reiciendis voluptates voluptas consectetur maxime totam reprehenderit, cumque quidem molestias. Esse dolorum rem reprehenderit explicabo dolor asperiores perferendis, a aut.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false">
+                                            <i class="fa fa-angle-right"></i> Collapsible Group Item #3
+                                          </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse" aria-expanded="false">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis iste, in nostrum obcaecati beatae voluptatum labore veniam commodi quae, at, exercitationem ut esse consequuntur placeat sequi dolorum sed neque ab?
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-group accordion accordion-semi" id="accordion3">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" data-parent="#accordion3" href="#ac3-1">
+                                            <i class="fa fa-angle-right"></i> Semi-primary Accordion
+                                          </a>
+                                        </h4>
+                                    </div>
+                                    <div id="ac3-1" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officia debitis numquam labore nulla velit, voluptatibus totam facere nobis inventore aliquid ullam ratione sunt animi eligendi error ut. Inventore, beatae!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a class="collapsed" data-toggle="collapse" data-parent="#accordion3" href="#ac3-2">
+                                            <i class="fa fa-angle-right"></i> Collapsible Group Item #2
+                                          </a>
+                                        </h4>
+                                    </div>
+                                    <div id="ac3-2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime expedita eligendi, praesentium laudantium nam excepturi labore! At nostrum, nisi, illo quo quam incidunt maiores pariatur delectus earum recusandae itaque sunt.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a class="collapsed" data-toggle="collapse" data-parent="#accordion3" href="#ac3-3">
+                                            <i class="fa fa-angle-right"></i> Collapsible Group Item #3
+                                          </a>
+                                        </h4>
+                                    </div>
+                                    <div id="ac3-3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, pariatur, debitis. Laboriosam harum dignissimos corrupti. Officiis, saepe! Possimus numquam repellat quas, doloremque cumque eveniet commodi, iure aliquam, et dolores vero.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="panel-group accordion accordion-color" id="accordion2">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse-1" aria-expanded="false" class="collapsed">
+                                          <i class="fa fa-angle-right"></i> Primary Color
+                                        </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias fugiat tempore vel, incidunt harum, porro ad corporis sunt facere magni necessitatibus nulla obcaecati consequuntur voluptate quibusdam eveniet nemo, dolorem provident.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse-2" aria-expanded="false">
+                                          <i class="fa fa-angle-right"></i> Collapsible Group Item #2
+                                        </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-2" class="panel-collapse collapse" aria-expanded="false">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia illo culpa tenetur incidunt, beatae molestias maxime tempore dolorem doloremque dignissimos nam ab voluptas quasi dicta illum quisquam commodi omnis et!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse-3" aria-expanded="false">
+                                          <i class="fa fa-angle-right"></i> Collapsible Group Item #3
+                                        </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-3" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In nihil provident veniam a iste rem autem adipisci eum dolor dignissimos nostrum reiciendis, odit, architecto, quia distinctio labore, itaque cupiditate suscipit!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-group accordion accordion-semi" id="accordion4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading success">
+                                        <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion4" href="#ac4-1" aria-expanded="false" class="collapsed">
+                                          <i class="fa fa-angle-right"></i> Success Color
+                                        </a>
+                                        </h4>
+                                    </div>
+                                    <div id="ac4-1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, omnis, itaque. Sequi et sed sint quod totam numquam quisquam est qui, dolore dignissimos. Voluptatem dignissimos debitis qui tenetur blanditiis, adipisci.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading warning">
+                                        <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion4" href="#ac4-2" aria-expanded="false">
+                                          <i class="fa fa-angle-right"></i> Warning Color
+                                        </a>
+                                        </h4>
+                                    </div>
+                                    <div id="ac4-2" class="panel-collapse collapse" aria-expanded="false">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis error id quidem, delectus, deleniti rerum repudiandae totam eaque ratione assumenda aliquid fugit modi, accusantium aperiam. Consequuntur ad doloremque perferendis sapiente.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading danger">
+                                        <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion4" href="#ac4-3" aria-expanded="false">
+                                          <i class="fa fa-angle-right"></i> Danger Color
+                                        </a>
+                                        </h4>
+                                    </div>
+                                    <div id="ac4-3" class="panel-collapse collapse" aria-expanded="false">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit deleniti alias explicabo dolorem quasi magni veritatis quis consequuntur iusto sunt illum esse fugiat pariatur voluptate quas assumenda, maxime id maiores!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="pull-right hidden-xs">
+                Built with <i class="fa fa-heart"></i> by Bighero
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2017 <a href="#">Bighero</a>.</strong> All rights reserved.
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+    <!-- REQUIRED JS SCRIPTS -->
+    <script src="../../plugins/js/jquery-3.1.1.min.js"></script>
+    <script src="../../plugins/js/bootstrap.js"></script>
+    <script src="../../plugins/js/jquery.sparkline.min.js"></script>
+    <script src="../../plugins/js/countUp.min.js"></script>
+    <script src="../../plugins/js/raphael.min.js"></script>
+    <script src="../../plugins/js/morris.min.js"></script>
+    <script src="../../plugins/js/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="../../plugins/js/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../../plugins/js/material.min.js"></script>
+    <script src="../../plugins/js/ripples.min.js"></script>
+    <script src="../../plugins/js/jquery.toast.min.js"></script>
+    <script src="../../plugins/js/jquery.slimscroll.min.js"></script>
+    <script src="../../js/notifications.js"></script>
+    <script src="../../js/dashboard.js"></script>
+    <script src="../../js/app.js"></script>
+    <!-- Color Switcher -->
+    <script type="text/javascript">
+    $(function() {
+
+        $("head").append('<link id="skin-css" rel="stylesheet">');
+
+        $('.skin-colors li').on('click', function() {
+            $('.skins li').removeClass('active');
+            $(this).addClass('active');
+            $('#skin-css').attr('href', '../../css/colors/' + $(this).data('skin') + '.css');
+        });
+
+    });
+    </script>
+    <div class="skins">
+        <ul class="skin-colors">
+            <li data-skin="green" style="background-color: #27ae60" class="active"></li>
+            <li data-skin="light-green" style="background-color: #8bc34a"></li>
+            <li data-skin="indigo" style="background-color: #3f51b5"></li>
+            <li data-skin="amethyst" style="background-color: #9b59b6"></li>
+            <li data-skin="blue" style="background-color: #00a3d3"></li>
+            <li data-skin="dodger-blue" style="background-color: #33b3d3"></li>
+            <li data-skin="cyan" style="background-color: #00bcd4"></li>
+            <li data-skin="lime" style="background-color: #cddc39"></li>
+            <li data-skin="orange" style="background-color: #f39c12"></li>
+            <li data-skin="amber" style="background-color: #ffc107"></li>
+            <li data-skin="pink" style="background-color: #ea4c89"></li>
+            <li data-skin="red" style="background-color: #D64343"></li>
+            <li data-skin="teal" style="background-color: #009688"></li>
+        </ul>
+        <span class="skin-toggler"><i class="fa fa-gear fa-spin"></i></span>
+    </div>
+    <!-- END Skin switcher -->
+</body>
+
+
+<!-- Mirrored from www.upplanet.com/bighero/outlay-demo/inc/ui-elements/tabs-and-accordions.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jul 2020 07:26:42 GMT -->
+</html>
